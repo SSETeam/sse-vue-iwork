@@ -16,19 +16,19 @@
     </div>
     <div class="page-part-apply">
         <div class="page-part">
-            <mt-field style="width: 100%;" label="用餐人数" placeholder="请填写人数" type="number" v-model="userNum"></mt-field>
+            <mt-field class="apply-title" style="width: 100%;" label="用餐人数" placeholder="请填写人数" type="number" v-model="userNum"></mt-field>
         </div>
-        <span class="apply-radio" style="text-align: right;">
+        <div class="apply-radio" style="text-align: right;">
           <mt-radio
           v-on:change="checkPlace"
           v-model="valuePlace"
           :options="optionsPlace">
           </mt-radio>
-        </span>
+        </div>
     </div>
     <div class="page-part-apply">
         <div class="page-part">
-            <mt-field style="width: 100%;" label="接待事由" placeholder="请填写事由" v-model="userNum"></mt-field>
+            <mt-field class="apply-title" style="width: 100%;" label="接待事由" placeholder="请填写事由" v-model="userNum"></mt-field>
         </div>
         <div class="page-part">
           <span class="apply-radio" style="text-align: right;">
@@ -61,11 +61,11 @@
         </div>
     </div>
     <div class="page-part-apply">
-        <div style="position: relative;" v-on:click="foodModel">
-          <div class="page-part">
+        <div v-on:click="foodModel">
+          <!-- <div class="page-part">
             <mt-field class="foot-model" label="用餐模式" disabled placeholder="用餐模式" v-model="footModel"></mt-field>
-          </div>
-          <span class="icon-arrow-down">∨</span>
+          </div> -->
+        <mt-cell class="apply-title foot-model" title="用餐模式" is-link v-model="footModel"> </mt-cell>
         </div>
         <mt-popup
           style="width: 100%;"
@@ -87,12 +87,12 @@
         </mt-popup>
         
     </div>
-   <div class="page-part-apply">
+   <div class="page-part-apply apply-title">
         <mt-field label="联系人" style="width: 100%;" placeholder="联系人" type="请填写联系人" v-model="contacts"></mt-field>
         <mt-field style="width: 100%;" label="手机号码" placeholder="请填写手机号码" v-model="phone"></mt-field>
     </div>
     <div class="page-part-apply">
-      <mt-field style="width: 100%;" label="备注" placeholder="请填写备注" v-model="remark"></mt-field>
+      <mt-field class="apply-title" style="width: 100%;" label="备注" placeholder="请填写备注" v-model="remark"></mt-field>
     </div>
     <mt-button type="primary" style="width: 100%;">立即发送</mt-button>
   </div>
@@ -354,7 +354,14 @@ export default {
 }
 .apply-radio-type {
   .mint-radiolist-title {
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+}
+.apply-title {
+  .mint-cell-title {
+    font-size: 16px;
     font-weight: bold;
     color: #333;
   }
@@ -425,11 +432,11 @@ export default {
     font-size: 12px;
   }
 }
-.foot-model{
-  width: 100%;
-  .mint-cell-wrapper {
-    font-size: 12px;
-  }
+.foot-model .mint-cell-value.is-link{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 60%;
 }
 .page-part-apply,{
   .mint-cell-wrapper {

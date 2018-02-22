@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import MealIndex from '../views/mealApply/index.vue'
 import MealNewlApply from '../views/mealApply/newApply.vue'
 import MealApproval from '../views/mealApply/approval.vue'
+import MealInfo from '../views/mealApply/mealInfo.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -28,8 +29,17 @@ export default new Router({
       name: 'MealApproval',
       component: MealApproval,
       meta: {
-        title: '用餐申请'
+        title: '待我审批'
+      }
+    },
+    {
+      path: '/mealApply/mealInfo',
+      name: 'MealInfo',
+      component: MealInfo,
+      meta: {
+        title: '待我审批'
       }
     }
+
   ]
 })

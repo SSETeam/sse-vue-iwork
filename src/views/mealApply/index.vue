@@ -60,7 +60,9 @@
         </mt-tab-item>
         <mt-tab-item id="所有用餐">
             <img slot="icon" src="../../assets/images/mealList.png">
-            所有用餐
+            <router-link to="/mealApply/mealInfo">
+                用餐信息
+            </router-link>
         </mt-tab-item>
     </mt-tabbar>
     <mt-actionsheet

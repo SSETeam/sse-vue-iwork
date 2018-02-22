@@ -120,10 +120,7 @@ export default {
             width: 40px;
             padding: 2px;
         }
-        .leader-span{
-            padding: 2px;
-            border-radius: 2px;
-        }
+        
     }
     .pass-div{
         width: 100px;
