@@ -4,14 +4,8 @@
         <img class="search-img" src="../../assets/images/search.png">
         <mt-field label="" placeholder="搜索" v-model="search"></mt-field>
     </div>
-    <div class="page-part apply-div">
-        <div class="flex-1">迎春路B栋</div>
-        <div class="flex-1 pt-2">
-            <span class="">2月13日</span>
-            <span class="gray-text font-size-10">午餐</span>
-        </div>    
-        <div class="flex-1 leader-div"></div>
-        <div class="gray-text pt-2">18人</div>
+    <div class="page-part-rev plr-15">
+        <div class="gray-text font-size-12">03-01</div>
     </div>
     <div class="page-part apply-div">
         <div class="flex-1">迎春路B栋</div>
@@ -20,7 +14,18 @@
             <span class="gray-text font-size-10">午餐</span>
         </div>    
         <div class="flex-1 leader-div"></div>
-        <div class="gray-text pt-2">18人</div>
+        <div class="pt-2">18人</div>
+    </div>
+    <div class="page-part font-size-12 plr-15 mb-10">
+        <div class="flex-1">
+            <span class="pass-span blue-text">已通过</span>
+        </div>
+        <div class="flex-1 pass-div"></div>
+        <div class="flex-1 gray-text">技术开发总部</div>
+        <div class="">孙荔丽</div>
+    </div>
+    <div class="page-part-rev plr-15">
+        <div class="gray-text font-size-12">03-01</div>
     </div>
     <div class="page-part apply-div">
         <div class="flex-1">迎春路B栋</div>
@@ -31,7 +36,37 @@
         <div class="flex-1 leader-div">
             <span class="leader-span orange-bg white-text">领导参加</span> 
         </div>
-        <div class="gray-text pt-2">18人</div>
+        <div class="pt-2">18人</div>
+    </div>
+    <div class="page-part font-size-12 plr-15 mb-10">
+        <div class="flex-1">
+            <span class="reject-span red-text">未通过</span>
+        </div>
+        <div class="flex-1 pass-div"></div>
+        <div class="flex-1 gray-text">技术开发总部</div>
+        <div class="">孙荔丽</div>
+    </div>
+    <div class="page-part-rev plr-15">
+        <div class="gray-text font-size-12">03-01</div>
+    </div>
+    <div class="page-part apply-div">
+        <div class="flex-1">迎春路B栋</div>
+        <div class="flex-1 pt-2">
+            <span class="">2月13日</span>
+            <span class="gray-text font-size-10">午餐</span>
+        </div>    
+        <div class="flex-1 leader-div">
+            <span class="leader-span orange-bg white-text">领导参加</span> 
+        </div>
+        <div class="pt-2">18人</div>
+    </div>
+    <div class="page-part font-size-12 plr-15 mb-10">
+        <div class="flex-1">
+            <span class="reject-span red-text">未通过</span>
+        </div>
+        <div class="flex-1 pass-div"></div>
+        <div class="flex-1 gray-text">技术开发总部</div>
+        <div class="">孙荔丽</div>
     </div>
     <mt-tabbar v-model="tab_selected">
         <mt-tab-item id="我的申请">
@@ -79,7 +114,6 @@ export default {
     .apply-div{
         height: 25px;
         padding: 15px;
-        margin-bottom: 10px;
         .leader-div{
             font-size: 10px;
             width: 40px;
@@ -89,6 +123,20 @@ export default {
             padding: 2px;
             border-radius: 2px;
         }
+    }
+    .pass-div{
+        width: 100px;
+        padding: 2px;
+    }
+    .pass-span{
+        border: 1px solid #4F78A9;
+        padding: 2px;
+        border-radius:2px; 
+    }
+    .reject-span{
+        border: 1px solid #e90f38;
+        padding: 2px;
+        border-radius:2px; 
     }
 }
 </style>
