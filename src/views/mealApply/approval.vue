@@ -1,9 +1,10 @@
 <template>
   <div class="meal-container">
-    <div class="page-part search-div">  
-        <img class="search-img" src="../../assets/images/search.png">
-        <mt-field label="" placeholder="搜索" v-model="search"></mt-field>
-    </div>
+    <mt-search
+        v-model="value"
+        cancel-text="取消"
+        placeholder="搜索">
+        </mt-search>
     <div class="page-part-rev plr-15">
         <div class="gray-text font-size-12">03-01</div>
     </div>
@@ -138,5 +139,9 @@ export default {
         padding: 2px;
         border-radius:2px; 
     }
+    .mint-search{
+        height: auto;
+    }
 }
+
 </style>
