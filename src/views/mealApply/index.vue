@@ -1,10 +1,60 @@
+<style lang="less">
+.meal-container{
+    height: 100%;
+    .header{
+        height: 150px;
+        .logo-div{
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            margin-left: 60px;
+            margin-top: 35px;
+        }
+        .logo-img{
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        .logo-title{
+            text-align: center;
+            margin-top: 10px;
+        }
+    }
+    .apply-div{
+        height: 25px;
+        padding: 15px;
+        margin-bottom: 10px;
+        .leader-div{
+            font-size: 10px;
+            width: 40px;
+            padding: 2px;
+        }
+        .leader-span{
+            padding: 2px;
+            border-radius: 2px;
+        }
+    }
+    .mint-popup{
+        width: 100%;
+        text-align: center;
+        bottom: 0;
+        top: auto;
+        .opt-div{
+            border-bottom: 1px solid #fafafa;
+            height: 30px;
+            padding-top: 16px;
+        }
+    }
+}
+</style>
 <template>
   <div class="meal-container">
     <div class="page-part wx-bg white-text header">
         <div class="flex-1">
-            <div class="white-bg logo-div">
-                <img class="logo-img" src="../../assets/images/newApply.png">
-            </div>
+            <router-link to="/mealApply/newApply">
+                <div class="white-bg logo-div">
+                    <img class="logo-img" src="../../assets/images/newApply.png">
+                </div>
+            </router-link>
             <div class="logo-title">
                 新建申请
             </div>
@@ -88,51 +138,4 @@ export default {
 };
 </script>
 
-<style lang="less">
-.meal-container{
-    height: 100%;
-    .header{
-        height: 150px;
-        .logo-div{
-            height: 70px;
-            width: 70px;
-            border-radius: 50%;
-            margin-left: 60px;
-            margin-top: 35px;
-        }
-        .logo-img{
-            margin-left: 20px;
-            margin-top: 20px;
-        }
-        .logo-title{
-            text-align: center;
-            margin-top: 10px;
-        }
-    }
-    .apply-div{
-        height: 25px;
-        padding: 15px;
-        margin-bottom: 10px;
-        .leader-div{
-            font-size: 10px;
-            width: 40px;
-            padding: 2px;
-        }
-        .leader-span{
-            padding: 2px;
-            border-radius: 2px;
-        }
-    }
-    .mint-popup{
-        width: 100%;
-        text-align: center;
-        bottom: 0;
-        top: auto;
-        .opt-div{
-            border-bottom: 1px solid #fafafa;
-            height: 30px;
-            padding-top: 16px;
-        }
-    }
-}
-</style>
+

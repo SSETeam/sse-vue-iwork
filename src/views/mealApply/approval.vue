@@ -1,3 +1,45 @@
+<style lang="less">
+.meal-container{
+    height: 100%;
+    .search-div{
+        margin: 10px;
+        border-radius: 2px;
+    }
+    .search-img{
+        width: 20px;
+        height: 20px;
+        margin: 15px;
+    }
+    .apply-div{
+        height: 25px;
+        padding: 15px;
+        .leader-div{
+            font-size: 10px;
+            width: 40px;
+            padding: 2px;
+        }
+        
+    }
+    .pass-div{
+        width: 100px;
+        padding: 2px;
+    }
+    .pass-span{
+        border: 1px solid #4F78A9;
+        padding: 2px;
+        border-radius:2px; 
+    }
+    .reject-span{
+        border: 1px solid #e90f38;
+        padding: 2px;
+        border-radius:2px; 
+    }
+    .mint-search{
+        height: auto;
+    }
+}
+
+</style>
 <template>
   <div class="meal-container">
     <mt-search
@@ -100,45 +142,4 @@ export default {
 };
 </script>
 
-<style lang="less">
-.meal-container{
-    height: 100%;
-    .search-div{
-        margin: 10px;
-        border-radius: 2px;
-    }
-    .search-img{
-        width: 20px;
-        height: 20px;
-        margin: 15px;
-    }
-    .apply-div{
-        height: 25px;
-        padding: 15px;
-        .leader-div{
-            font-size: 10px;
-            width: 40px;
-            padding: 2px;
-        }
-        
-    }
-    .pass-div{
-        width: 100px;
-        padding: 2px;
-    }
-    .pass-span{
-        border: 1px solid #4F78A9;
-        padding: 2px;
-        border-radius:2px; 
-    }
-    .reject-span{
-        border: 1px solid #e90f38;
-        padding: 2px;
-        border-radius:2px; 
-    }
-    .mint-search{
-        height: auto;
-    }
-}
 
-</style>
